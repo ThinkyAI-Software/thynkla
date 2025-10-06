@@ -26,6 +26,15 @@ struct MainView: View {
             }
             .buttonStyle(.plain)
 
+            NavigationLink(destination: ChatView()) {
+                Text("Ask")
+                    .font(.title3)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.secondary.opacity(0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+
             if recorder.isRecording {
                 Text("Recording…")
                     .foregroundStyle(.secondary)
